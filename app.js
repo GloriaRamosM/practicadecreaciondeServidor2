@@ -11,6 +11,8 @@ require("dotenv").config();
 
 const PORT = process.env.PORT;
 
+app.use(express.static("public"));
+
 // metodos nativos de express
 app.use(express.urlencoded());
 app.use(express.json());
@@ -18,9 +20,8 @@ app.use(express.json());
 // Override para habilitar los metodos de PUT y DELETE, captura estas peticiones
 app.use(methodOverride("_method"));
 
-/* Estaticos*/
+/* Rutas*/
 
-app.use(express.static("public"));
 app.use("/", mainRoutes);
 app.use("/", adminRoutes);
 
