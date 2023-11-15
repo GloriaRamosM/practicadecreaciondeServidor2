@@ -2,3 +2,8 @@ body{
     background-color: blueviolet;
     color: azure;
 }
+
+picture img{
+    width: 600px;
+    height: 500px;
+}
