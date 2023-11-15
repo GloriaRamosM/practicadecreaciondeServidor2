@@ -7,7 +7,9 @@ const mainRoutes = require("./src/routes/mainRoutes");
 
 const adminRoutes = require("./src/routes/adminRoutes");
 
-const PORT = 3000;
+require("dotenv").config();
+
+const PORT = process.env.PORT;
 
 // metodos nativos de express
 app.use(express.urlencoded());
